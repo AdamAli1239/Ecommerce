@@ -13,8 +13,8 @@ app.use((req, res, next) => {
   console.log(req.method, req.path);
   next();
 });
-app.use("/user", AuthRoutes);
-app.use("/items", ItemRoutes);
+app.use("/api/user", AuthRoutes);
+app.use("/api/items", ItemRoutes);
 
 app.listen(process.env.PORT);
 mongoose.connect(process.env.DB_URL);
